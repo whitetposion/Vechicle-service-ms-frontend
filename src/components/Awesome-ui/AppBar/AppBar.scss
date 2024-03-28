@@ -1,0 +1,36 @@
+.AppBar {
+    box-sizing: border-box;
+    height:6vh;
+    width:100%;
+    padding: 0px 12px;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid #d6dfe8;
+    position: relative;;
+    z-index: 100;
+}
+
+.ToolBar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.AppBar-dark {
+    background-color: var(--dark-bg);
+}
+.AppBar-light {
+    background-color: var(--light-bg);
+}
+
+.ToolBar-space-between {
+    justify-content: space-between;
+}
+.ToolBar-space-around {
+    justify-content: space-around;
+}
+.ToolBar-space-evenly {
+    justify-content: space-evenly;
+}

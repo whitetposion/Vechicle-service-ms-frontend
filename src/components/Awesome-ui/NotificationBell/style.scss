@@ -1,0 +1,27 @@
+.aui_icons_notification_bell {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    
+    &:hover {
+        animation: ring 0.5s ease-in 1;
+    }
+}
+@keyframes ring {
+    0% {
+        transform: rotateZ(0);
+        transform-origin: top;
+    }
+    30% {
+        transform: rotateZ(-10deg);
+    }
+    60% {
+        transform: rotateZ(0);
+    }
+    80% {
+        transform: rotateZ(10deg);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}

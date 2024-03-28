@@ -1,0 +1,143 @@
+/**
+  Dark Theme 
+*/
+.name-type-dark {
+    .name-type-icon {
+        // background-color: var(--light-bg);
+
+        > svg {
+            fill: #9aadba;
+            width: 25px !important;
+            height: 25px !important;
+        }
+    }
+    .name-type-text {
+        span {
+            color: #fff !important;
+        }
+    }
+    &:hover {
+        background: var(--dark-bg-active);
+    }
+}
+.type-name-dark-active {
+    background: var(--dark-bg-active);
+    border-left: 3px solid var(--side-bar-border);
+    .svg-icon {
+        svg {
+            fill: #fff !important;
+        }
+    }
+}
+
+/**
+  light Theme 
+*/
+.name-type-light {
+    .name-type-icon {
+        // background-color: var(--dark-bg);
+
+        > svg {
+            fill: #8a99a3;
+        }
+    }
+    .name-type-text {
+        span {
+            color: var(--dark-bg);
+        }
+    }
+    &:hover {
+        background: var(--light-bg-active);
+        .name-type-text {
+            span {
+                color: var(--light-border);
+            }
+        }
+    }
+}
+
+.type-name-light-active {
+    background: var(--light-bg-active);
+    border-left: 3px solid var(--light-border);
+    .name-type-text {
+        span {
+            color: var(--light-border);
+        }
+    }
+    .svg-icon {
+        svg {
+            fill: #fff !important;
+            .st0 {
+                fill: var(--bg-back-light);
+            }
+        }
+    }
+}
+
+/**
+  This is the main styling with no colors handling
+*/
+.side-nav-type-name {
+    display: flex;
+    padding: 12px;
+    width: 100%;
+    text-decoration: none;
+    align-items: center;
+    flex-direction: column;
+
+    .name-type-icon {
+        width: 2rem;
+        height: 2rem;
+
+        > svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    .name-type-text {
+        margin-top: 5px;
+        font-size: 0.9rem;
+
+        @media (max-width: "1250px") {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+.slim {
+    .type-name-active {
+        .svg-icon {
+            svg {
+                fill: #fff !important;
+                .st0 {
+                    fill: var(--bg-back-light);
+                }
+            }
+        }
+    }
+}
+
+.expand {
+    .side-nav-type-name {
+        flex-direction: row;
+        align-items: center;
+        .name-type-text {
+            margin-top: 0px;
+            margin-left: 1rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    .type-name-active {
+        flex-direction: row;
+        align-items: center;
+        .svg-icon {
+            svg {
+                fill: #fff;
+                .st0 {
+                    fill: var(--bg-back-light);
+                }
+            }
+        }
+    }
+}
