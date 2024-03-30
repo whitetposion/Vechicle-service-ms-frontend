@@ -6,23 +6,21 @@ import SideBarNameIcon from "./sideBar/SideBarNameIcon/SideBarNameIcon";
 interface NavOption {
   name: string;
   link: string;
-  Icon: React.ElementType; // Adjust the type as per your SvgIcon component props
+  Icon: React.ReactNode; // Adjust the type as per your SvgIcon component props
 }
 
 interface Props {
   type: "named" | "slim";
   expand: boolean ;
-  theme: "dark" | "light";
   navOptions: NavOption[];
 }
 
-const SideNav: React.FC<Props> = ({ type, expand, theme, navOptions }) => {
+const SideNav: React.FC<Props> = ({ type, expand, navOptions }) => {
   return (
-    <SideBar type={type} expand={expand} theme={theme}>
+    <SideBar type={type} expand={expand}>
       {type === "named" &&
         navOptions.map((link, index) => (
           <SideBarNameIcon
-            theme={theme}
             key={index}
             name={link.name}
             link={link.link}
@@ -32,7 +30,6 @@ const SideNav: React.FC<Props> = ({ type, expand, theme, navOptions }) => {
       {(!type || type === "slim") &&
         navOptions.map((link, index) => (
           <Icon
-            theme={theme}
             key={index}
             name={link.name}
             url={link.link}

@@ -1,74 +1,54 @@
 /**
   Dark Theme 
 */
-.name-type-dark {
-    .name-type-icon {
-        // background-color: var(--light-bg);
 
+.name-type {
+    position: relative;
+    .highlight{
+        position: absolute;
+        height: 100%;
+        width: 5px;
+        left: 0;
+        top:0;
+        border-top-right-radius:5px ;
+        border-bottom-right-radius: 5px;
+
+    }
+    .name-type-icon {
         > svg {
-            fill: #9aadba;
-            width: 25px !important;
-            height: 25px !important;
+            
         }
     }
     .name-type-text {
         span {
-            color: #fff !important;
+            color: hsl(var(--secondary-foreground));
         }
     }
     &:hover {
-        background: var(--dark-bg-active);
-    }
-}
-.type-name-dark-active {
-    background: var(--dark-bg-active);
-    border-left: 3px solid var(--side-bar-border);
-    .svg-icon {
-        svg {
-            fill: #fff !important;
-        }
-    }
-}
-
-/**
-  light Theme 
-*/
-.name-type-light {
-    .name-type-icon {
-        // background-color: var(--dark-bg);
-
-        > svg {
-            fill: #8a99a3;
-        }
-    }
-    .name-type-text {
-        span {
-            color: var(--dark-bg);
-        }
-    }
-    &:hover {
-        background: var(--light-bg-active);
+        background: hsl(var(--muted-foreground));
         .name-type-text {
             span {
-                color: var(--light-border);
+                color: hsl(var(--primary));
             }
         }
     }
 }
 
-.type-name-light-active {
-    background: var(--light-bg-active);
-    border-left: 3px solid var(--light-border);
+.type-name-active {
+    background: hsl(var(--primary-foreground));
+    .highlight{
+        background-color: hsl(var(--primary));
+    }
     .name-type-text {
         span {
-            color: var(--light-border);
+            color: hsl(var(--primary));
         }
     }
     .svg-icon {
         svg {
             fill: #fff !important;
             .st0 {
-                fill: var(--bg-back-light);
+                fill: hsl(var(--primary));
             }
         }
     }
@@ -86,8 +66,6 @@
     flex-direction: column;
 
     .name-type-icon {
-        width: 2rem;
-        height: 2rem;
 
         > svg {
             width: 25px;
@@ -97,7 +75,6 @@
     .name-type-text {
         margin-top: 5px;
         font-size: 0.9rem;
-
         @media (max-width: "1250px") {
             font-size: 0.7rem;
         }
@@ -110,7 +87,7 @@
             svg {
                 fill: #fff !important;
                 .st0 {
-                    fill: var(--bg-back-light);
+                    fill: hsl(var(--primary));
                 }
             }
         }
@@ -135,7 +112,7 @@
             svg {
                 fill: #fff;
                 .st0 {
-                    fill: var(--bg-back-light);
+                    fill: hsl(var(--primary));
                 }
             }
         }

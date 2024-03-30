@@ -1,7 +1,7 @@
 /**
   Dark Theme 
 */
-.slim-type-dark {
+.slim-type {
     width: 47px;
     height: 47px;
     margin: 10px auto;
@@ -13,18 +13,18 @@
 
     .slim-type-icon {
         > svg {
-            fill: #9aadba;
-            width: 25px;
-            height: 25px;
+            fill:hsl(var(--primary-foreground));// #9aadba;
+            // width: 25px;
+            // height: 25px;
         }
     }
     .slim-type-text {
-        color: #fff;
+        color: hsl(var(--secondary-foreground));
         min-width: 40%;
     }
     &:hover {
         .icon-wrapper{
-            background: var(--dark-bg-active);
+            background: hsl(var(--primary-foreground));
         }
 
         .slim-type-icon {
@@ -34,16 +34,16 @@
         }
     }
 }
-.type-slim-dark-active {
+.type-slim-active {
     width: 47px;
     height: 47px;
     margin: 10px auto;
     border-radius: 50%;
     .icon-wrapper{
-        background: var(--dark-bg-active);
+        background: hsl(var(--muted));
     }
     .highlight{
-        background-color: #ffffff;
+        background-color: hsl(var(--secondary-foreground));
     }
     .slim-type-icon {
         svg {
@@ -55,7 +55,7 @@
 /**
   light Theme 
 */
-.slim-type-light {
+.slim-type {
     width: 100%;
     height: 40px;
     margin: 10px 0px 10px 0px;
@@ -91,11 +91,11 @@
     }
 }
 
-.type-slim-light-active { // changes here
+.type-slim-active { // changes here
     
     .slim-type-text {
         span {
-            color: var(--light-border);
+            color: hsl(var(--secondary-foreground));
         }
     }
     .slim-type-icon {

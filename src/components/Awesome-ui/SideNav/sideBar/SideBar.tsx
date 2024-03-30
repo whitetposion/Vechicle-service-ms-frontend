@@ -1,23 +1,28 @@
 import React, { ReactNode } from "react";
+import { BookUser } from "lucide-react";
 
 import "./sideBar.scss";
 
 interface SideBarProps {
     type: "named" | "slim";
     expand: boolean;
-    theme: string;
     children?: ReactNode;
 }
 
-const SideBar: React.FC<SideBarProps> = ({ type, expand, theme, children }) => {
+const SideBar: React.FC<SideBarProps> = ({ type, expand, children }) => {
     return (
         <>
             <div
                 className={`sideBar ${expand && "expand"} ${
                     type === "named" ? "medium" : "slim"
-                } theme-${theme}`}
+                }`}
             >
                 <div className="topIcons">
+                    <div className="company-logo">
+                        <div className={`logo`} style={{ display: "flex" }}>
+                            {<BookUser/> }
+                        </div>
+                    </div>
                     {children}
                 </div>
             </div>

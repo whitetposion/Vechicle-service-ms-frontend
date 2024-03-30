@@ -3,7 +3,7 @@
     flex: 1;
     height: 100vh;
     overflow: scroll;
-    background-color: var(--main-content);
+    background-color: hsl(var(--background));
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none;
 }
@@ -35,7 +35,7 @@
     .available-credit-container {
         height: 100%;
         width: 120px;
-        border: 1px solid #d6dfe8;
+        border: 1px solid hsl(var(--border));
         border-top: none;
         border-bottom: none;
         display: flex;
@@ -60,14 +60,10 @@
             > p {
                 font-size: 14px;
                 font-weight: 600;
-                color: #15bf86;
+                color: #15bf86; // add dynamic coloring to text on low coins
             }
         }
-        .time-zone-gmt {
-            font-size: 13px;
-            color: #506e91;
-            cursor: default;
-        }
+        
         > p {
             font-size: 13px;
             color: #506e91;
@@ -82,10 +78,10 @@
         border: 2px solid transparent;
         border-radius: 5px;
         &:hover {
-            background-color: #fff9e0;
+            background-color: hsl(var(--background));
             border-color: #f2c300;
             > p {
-                color: black;
+                color: hsl(var(--primary));
             }
         }
         > svg {
@@ -96,7 +92,7 @@
             font-size: 14px;
             font-weight: 600;
             margin: 0 5px;
-            color: rgb(77, 77, 77);
+            color: hsl(var(--primary));
         }
     }
 }

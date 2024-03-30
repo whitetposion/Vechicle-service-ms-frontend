@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import "./IconStyle.scss"
 /**
  * Icon for the side nav bar
@@ -9,35 +9,28 @@ import "./IconStyle.scss"
  * @param {String} link
  */
 type SideBarIconProps = {
-    SvgIcon: React.ElementType;
+    SvgIcon?: React.ReactNode;
     name: string;
     url: string;
-    theme: "dark" | "light";
 };
-const Icon: React.FC<SideBarIconProps> = ({ SvgIcon, name, url, theme }) => {
+const Icon: React.FC<SideBarIconProps> = ({ SvgIcon, name, url }) => {
     return (
-        <Link
+        <NavLink
             to={url}
-            className={`side-nav-type-slim slim-type-${theme}`}
+            className={({isActive}) =>(`side-nav-type-slim slim-type ${isActive ? "type-slim-active": ""}`)}
         >
             <div className="highlight"></div>
             <div className="icon-wrapper">
                 <div
                     className="slim-type-icon"
                 >
-                    <SvgIcon/>
+                    {SvgIcon}
                 </div>
             </div>
-            <span className="slim-type-text" style={{ color: "#fff" }}>
+            <span className="slim-type-text" >
                 {name.toUpperCase()}
             </span>
-            {/* <ToolTip
-                direction="right"
-                name={name.toUpperCase()}
-                color={"#fff"}
-                background="Default"
-            /> */}
-        </Link>
+        </NavLink>
     )
 }
 

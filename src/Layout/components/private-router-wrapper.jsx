@@ -3,11 +3,18 @@ import { Link } from "react-router-dom"
 import AppBar from "@/components/Awesome-ui/AppBar/AppBar"
 import SideNav from "@/components/Awesome-ui/SideNav/SideNav"
 import NotificationBell from "@/components/Awesome-ui/NotificationBell/NotificationBell"
+import "./styles.scss"
 
-let navOptions = [
+let sideNavOptions = [
   { name: "Products", link: "/products", Icon: <ShoppingCart/> },
   { name: "Follow Ups", link: "/follow-ups", Icon: <SquareGanttChart/>  },
   { name: "Services", link: "/services", Icon: <Wrench/>  },
+     
+]
+let topNavOptions = [
+  { name: "Dasboard", link: "/", },
+  { name: "Inventory", link: "/inventory"},
+  { name: "Tickets", link: "/tickets" },
      
 ]
 const RightLinks = ({}) => {
@@ -28,20 +35,32 @@ const RightLinks = ({}) => {
       </>
   )
 }
-const PrivateRouteWrapper = () => {
+
+const PrivateRouteWrapper = ({children}) => {
     return (
     <div className = "flex">
       <SideNav
         type={'named'}
         expand={true}
-        theme={"light"}
-        navOptions={navOptions}
+        navOptions={sideNavOptions}
       />
       <div className="main-app">
         <AppBar
           justify="space-between"
         >
-          {/* insert routes here */}
+          <div className="flex h-full w-full justify-evenly">
+            {topNavOptions.map((link, index) => (
+              <div className="h-full text-10 flex justify-center items-center m-4 hover:text-gray-500">
+                <Link
+                  key={index}
+                  to={link.link}
+                >
+                  {link.name}
+                </Link>
+              </div>
+              
+            ))}
+          </div>
             <div className="userAvatar">
               <div
                 className="available-credit-container"
@@ -51,12 +70,11 @@ const PrivateRouteWrapper = () => {
                     {/* <Credit /> */}
                     <p> coins</p>
                 </div>
-                <p>Credit Balance</p>
               </div>
               <RightLinks/>
             </div>
         </AppBar>
-        <div className="layout-main-content">{props.children}</div>
+        <div className="layout-main-content">{children}</div>
       </div>
     </div>
   )
