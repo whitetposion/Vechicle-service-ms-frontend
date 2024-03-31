@@ -1,11 +1,11 @@
 .AppBar {
     box-sizing: border-box;
-    height:6vh;
+    height:8vh;
     width:100%;
     padding: 0px 12px;
     display: flex;
     align-items: center;
-    background-color: var(--light-bg);
+    background-color: hsl(var(--background));
     border-bottom: 1px solid #d6dfe8;
     position: relative;;
     z-index: 100;
@@ -18,15 +18,11 @@
     align-items: center;
 }
 
-.AppBar-dark {
-    background-color: var(--dark-bg);
-}
-.AppBar-light {
-    background-color: var(--light-bg);
-}
-
 .ToolBar-space-between {
     justify-content: space-between;
+}
+.ToolBar-flex-end {
+    justify-content: flex-end;
 }
 .ToolBar-space-around {
     justify-content: space-around;

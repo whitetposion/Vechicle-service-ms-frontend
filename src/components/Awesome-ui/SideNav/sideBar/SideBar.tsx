@@ -19,7 +19,7 @@ const SideBar: React.FC<SideBarProps> = ({ type, expand, children }) => {
             >
                 <div className="topIcons">
                     <div className="company-logo">
-                        <div className={`logo`} style={{ display: "flex" }}>
+                        <div className="logo" >
                             {<BookUser/> }
                         </div>
                     </div>

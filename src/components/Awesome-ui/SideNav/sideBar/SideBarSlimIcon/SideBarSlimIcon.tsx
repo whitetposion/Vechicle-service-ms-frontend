@@ -17,7 +17,7 @@ const Icon: React.FC<SideBarIconProps> = ({ SvgIcon, name, url }) => {
     return (
         <NavLink
             to={url}
-            className={({isActive}) =>(`side-nav-type-slim slim-type ${isActive ? "type-slim-active": ""}`)}
+            className={({isActive}) =>(`side-nav-type-slim  ${isActive ? "type-slim-active": ""}`)}
         >
             <div className="highlight"></div>
             <div className="icon-wrapper">

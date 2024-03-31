@@ -15,9 +15,9 @@ type Props = {
     props?: any
     children?: ReactNode;
 }
-const AppBar:React.FC<Props> = ({ color,  justify, theme = "light", className, children }) => {
+const AppBar:React.FC<Props> = ({ justify, className, children }) => {
     return (
-        <div className={`AppBar AppBar-${theme} ${className || ""}`} >
+        <div className={`AppBar  ${className || ""}`} >
             <div className={`ToolBar ToolBar-${justify}`}>{children}</div>
         </div>
     )

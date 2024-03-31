@@ -1,137 +1,8 @@
-/**
-  Dark Theme 
-*/
-.slim-type {
-    width: 47px;
-    height: 47px;
-    margin: 10px auto;
-    border-radius: 50% !important;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .slim-type-icon {
-        > svg {
-            fill:hsl(var(--primary-foreground));// #9aadba;
-            // width: 25px;
-            // height: 25px;
-        }
-    }
-    .slim-type-text {
-        color: hsl(var(--secondary-foreground));
-        min-width: 40%;
-    }
-    &:hover {
-        .icon-wrapper{
-            background: hsl(var(--primary-foreground));
-        }
-
-        .slim-type-icon {
-            > svg {
-                fill: #d0dae0;
-            }
-        }
-    }
-}
-.type-slim-active {
-    width: 47px;
-    height: 47px;
-    margin: 10px auto;
-    border-radius: 50%;
-    .icon-wrapper{
-        background: hsl(var(--muted));
-    }
-    .highlight{
-        background-color: hsl(var(--secondary-foreground));
-    }
-    .slim-type-icon {
-        svg {
-            fill: #fff !important;
-        }
-    }
-}
-
-/**
-  light Theme 
-*/
-.slim-type {
-    width: 100%;
-    height: 40px;
-    margin: 10px 0px 10px 0px;
-    //border-radius: 50% !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .slim-type-icon {
-        > svg {
-            fill: #99acc2;
-            width: 25px;
-            height: 25px;
-        }
-    }
-    .slim-type-text {
-        color: var(--dark-bg);
-    }
-    &:hover {
-        .icon-wrapper{
-            background-color:#7D51FE;
-        } ;
-        .slim-type-text {
-            color: var(--light-border);
-        }
-        .slim-type-icon {
-            > svg {
-                fill: #fff;
-                width: 25px;
-                height: 25px;
-            }
-        }
-    }
-}
-
-.type-slim-active { // changes here
-    
-    .slim-type-text {
-        span {
-            color: hsl(var(--secondary-foreground));
-        }
-    }
-    .slim-type-icon {
-        > svg {
-            fill: #fff;
-            width: 25px;
-            height: 25px;
-        }
-    }
-    .highlight{
-        background-color: #7D51FE;
-    }
-    .icon-wrapper {
-        width: 70%;
-        height: 40px;
-        padding: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #7D51FE;
-        border-radius: 50%;
-    }
-    .svg-icon {
-        svg {
-            fill: #fff !important;
-            .st0 {
-                fill: var(--bg-back-light);
-            }
-        }
-    }
-}
-
 .side-nav-type-slim {
     position: relative;
     width: 100%;
-    height: 40px;
+    height: 7vh;
+    margin: 10px 0px 0px 0px;
     display: flex;
     text-decoration: none;
     align-items: center;
@@ -139,57 +10,65 @@
     justify-content: center;
 
     .slim-type-icon {
-        border-radius: 0;
-        height: 25px;
-        width: 25px;
+         border-radius: 0;
+         height: 25px;
+         width: 25px;
     }
     .slim-type-text {
-        display: none;
-        margin-top: 0px;
-        margin-left: 1rem;
-        font-size: 0.9rem;
+         display: none;
+         margin-top: 0px;
+         margin-left: 1rem;
+         font-size: 0.9rem;
     }
     .highlight{
-        position: absolute;
-        width: 5px;
-        height: 100%;
-        border-top-right-radius:5px ;
-        border-bottom-right-radius: 5px;
-        left: 0%;
-        top: 0%;
+         position: absolute;
+         width: 5px;
+         height: 100%;
+         border-top-right-radius:5px ;
+         border-bottom-right-radius: 5px;
+         left: 0%;
+         top: 0%;
     }
     .icon-wrapper {
-        width: 40px;
-        height: 40px;
-        padding: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
+         width: 40px;
+         height: 40px;
+         padding: 12px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 50%;
     }
     &:hover {
-        .tooltip {
-            visibility: visible;
-        }
-        // .icon-wrapper{
-        //     background-color: #7D51FE;
-        // }
+         .tooltip {
+              visibility: visible;
+         }
     }
 }
-
-.slim {
-    .type-slim-active {
-        .icon-wrapper {
-            border-radius: 50%;
-        }
-        .svg-icon {
-            svg {
-                fill: #fff !important;
-            }
-        }
+.side-nav-type-slim {
+    &:hover{
+         .icon-wrapper{
+              background-color:#7D51FE;
+          } ;
+         .slim-type-icon {
+              > svg{
+                   stroke: hsl(var(--background));
+              }
+         }
     }
 }
-
+.type-slim-active {
+    .icon-wrapper{
+         background: #7D51FE;
+    }
+    .highlight{
+         background:#7D51FE ;
+    }
+    .slim-type-icon {
+         svg{
+              stroke: hsl(var(--background));
+         }
+    }
+}
 .expand {
     .side-nav-type-slim {
         flex-direction: row;
@@ -203,14 +82,6 @@
         flex-direction: row;
         align-items: center;
 
-        .svg-icon {
-            svg {
-                // fill: #fff !important;
-                .st0 {
-                    fill: var(--bg-back-light);
-                }
-            }
-        }
     }
 
     &:hover {
@@ -218,49 +89,5 @@
             visibility: hidden;
         }
     }
-
-    // Own
-    .type-slim-dark-active {
-        width: 100%;
-        .slim-type-icon {
-            svg {
-                fill: #fff !important;
-            }
-        }
-
-        &:hover {
-            background: #547492c5 !important;
-
-            .slim-type-icon {
-                > svg {
-                    fill: #d0dae0;
-                }
-            }
-        }
-    }
-
-    .slim-type-dark {
-        width: 100%;
-        margin: 2px auto;
-        border-radius: 0 !important;
-        .slim-type-icon {
-            > svg {
-                fill: #9aadba;
-                width: 25px;
-                height: 25px;
-            }
-        }
-        .slim-type-text {
-            color: #fff;
-        }
-        &:hover {
-            background: rgba(102, 133, 161, 0.247);
-
-            .slim-type-icon {
-                > svg {
-                    fill: #d0dae0;
-                }
-            }
-        }
-    }
 }
+

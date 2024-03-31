@@ -14,9 +14,7 @@ const SideBarNameIcon: React.FC<SideBarNameIconProps> = ({ SvgIcon, name, link }
             to={link}
             className={({isActive}) =>(`side-nav-type-name name-type ${isActive ? "type-name-active": ""}`)}
         >
-            <div className="highlight">
-
-            </div>
+            <div className="highlight"></div>
             <div
                 className="name-type-icon"
             >

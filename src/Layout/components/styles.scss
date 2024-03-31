@@ -15,17 +15,20 @@
     margin-right: 1rem;
     width: 1.5rem;
     height: 100%;
+    color: hsl(var(--muted-foreground));
     a {
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        color: hsl(var(--muted-foreground));
     }
 }
 
 .top-sideBar-wrapper {
     height: 100%;
 }
+
 
 .userAvatar {
     display: flex;
@@ -44,10 +47,6 @@
         &.no-right {
             border-right: none;
             width: 100px;
-        }
-        .time-zone-time {
-            font-size: 14px;
-            font-weight: 600;
         }
         .credit-stats-main {
             display: flex;
@@ -99,7 +98,7 @@
 
 .layout-main-content {
     position: relative;
-    height: 94vh;
+    height: 92vh;
     width: 100%;
     overflow-y: hidden;
 }
