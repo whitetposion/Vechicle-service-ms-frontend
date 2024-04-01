@@ -23,9 +23,9 @@ const Layout = () => {
           )
      }
      return (
-          <div>
+          <>
                {routes}
-          </div>
+          </>
      )
 }
 

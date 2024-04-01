@@ -1,8 +1,10 @@
+import AddService from "@/components/AddService/AddService"
 
 const Services = () => {
   return (
-    <div>
+    <div className="h-full w-full bg-background">
       this is services
+      <AddService/>
     </div>
   )
 }
