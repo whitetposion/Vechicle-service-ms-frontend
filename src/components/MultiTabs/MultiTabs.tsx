@@ -1,10 +1,12 @@
-import { CircleX } from 'lucide-react';
+import { CircleX, Component } from 'lucide-react';
 import React, { useRef, useState } from 'react'
-import AddService, { AddServiceRef } from '../AddService/AddService';
 
+interface RefProps {
+     executeFunction: () => void;
+}
 type props= {
      topNav: string[];
-     components: React.ReactNode[];
+     components: React.ElementType[];
      onComplete: ()=> void;
      onCancel: () => void;
 }
@@ -15,8 +17,8 @@ const MultiTabs:React.FC<props> = ({
      onCancel,
 }) => {
      const [currentTab, setCurrentTab] = useState(0)
-     const childRef = useRef<AddServiceRef>(null)
-
+     const childRef = useRef<RefProps>(null)
+     const Component = components[currentTab]
      return (
           
           <div className = "multitabs h-full w-3/4 p-4 flex-col justify-center items-center relative rounded-2xl bg-card border border-gray-400" >
@@ -38,13 +40,15 @@ const MultiTabs:React.FC<props> = ({
                     ))}
                </div>
                <div className='tab relative p-4 flex justify-start'>
-                    <AddService ref= {childRef}/>
+                    <Component ref= {childRef}/>
                </div>
                <div className='action-buttons flex justify-end items-center gap-5'>
                     <button 
                          name='save'
                          onClick={()=> childRef.current?.executeFunction()}
-                         className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-indigo-600 hover:text-background  hover:bg-indigo-700 focus:outline-none ">
+                         className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-indigo-600 hover:text-background  hover:bg-indigo-700 focus:outline-none "
+                    >
+                         Back
                     </button>
                     <button
                          name='next'

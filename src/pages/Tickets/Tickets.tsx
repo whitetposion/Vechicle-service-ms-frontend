@@ -6,7 +6,7 @@ const Tickets: React.FC = () => {
         <div className="relative w-full h-full p-4 flex justify-center items-center bg-background">
           <MultiTabs
             topNav={["Details", "Services", "Parts", "Billing"]}
-            components={[<AddService/>, <AddService/> , <AddService/> ,<AddService/>]}
+            components={[AddService, AddService , AddService ,AddService]}
             onComplete={()=>{}}
             onCancel={()=>{}}
           />
