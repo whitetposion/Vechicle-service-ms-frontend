@@ -21,7 +21,7 @@ interface AddServiceProps {}
 export interface AddServiceRef {
   executeFunction: () => void;
 }
-const AddService : React.ForwardRefRenderFunction<AddServiceRef, AddServiceProps> = (props, ref: Ref<AddServiceRef>)  => {
+const AddService : React.ForwardRefRenderFunction<AddServiceRef, AddServiceProps> = (_, ref: Ref<AddServiceRef>)  => {
      
      const executeFunction = () => {
           console.log("conadsjdjdj")

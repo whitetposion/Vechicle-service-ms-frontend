@@ -13,9 +13,9 @@ const Layout = () => {
      if (true){
           routes =  (
                <Routes>
-                    <Route path="/" element={<Dashboard/>}/>
+                    <Route path="/dasboard" element={<Dashboard/>}/>
                     <Route path="/inventory" element={<Inventory/>}/>
-                    <Route path="/tickets" element={<Tickets/>}/>
+                    <Route path="/" element={<Tickets/>}/>
                     <Route path="/products" element={<Products/>}/>
                     <Route path="/follow-ups" element={<FollowUps/>}/>
                     <Route path="/services" element={<Services/>}/>

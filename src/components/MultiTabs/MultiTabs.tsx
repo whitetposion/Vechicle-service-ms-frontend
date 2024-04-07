@@ -1,4 +1,4 @@
-import { CircleX, Component } from 'lucide-react';
+import { CircleX } from 'lucide-react';
 import React, { useRef, useState } from 'react'
 
 interface RefProps {
@@ -13,8 +13,6 @@ type props= {
 const MultiTabs:React.FC<props> = ({
      topNav,
      components,
-     onComplete,
-     onCancel,
 }) => {
      const [currentTab, setCurrentTab] = useState(0)
      const childRef = useRef<RefProps>(null)
