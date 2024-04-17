@@ -1,4 +1,4 @@
-export default Inventory = [
+export const Inventory = [
      {
        "name": "Bike Chain",
        "category": "bike",
