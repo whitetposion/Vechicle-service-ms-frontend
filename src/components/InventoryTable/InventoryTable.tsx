@@ -3,7 +3,7 @@ import {Inventory} from "@/assets/Data/inventory"
 
 const InventoryTable:React.FC = () => {
      return (
-          <div className="h-[90%] relative w-full p-2 scrollbar overflow-auto">
+          <div className="h-[90%] relative w-full px-2 scrollbar overflow-auto">
                <Table className="relative w-full overflow-auto">
                     <TableCaption>This is Inventory of Two wheelers</TableCaption>
                     <TableHeader>
