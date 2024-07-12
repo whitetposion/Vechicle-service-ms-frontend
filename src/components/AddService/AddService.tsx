@@ -67,7 +67,7 @@ const AddService : React.ForwardRefRenderFunction<AddServiceRef, AddServiceProps
      };
       
   return (
-    <div className="flex items-center justify-start w-full h-full">
+     <div className="flex items-center justify-start w-full h-full">
           <form onSubmit={handleSubmit} className="w-full">
                <div className="flex ">
                     {/* customer name */}
@@ -317,7 +317,7 @@ const AddService : React.ForwardRefRenderFunction<AddServiceRef, AddServiceProps
                     />
                </div>
           </form>
-    </div>
+     </div>
   )
 }
 

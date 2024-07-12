@@ -2,7 +2,7 @@
 const FollowUps = () => {
   return (
     <div>
-      This is follow ups
+      This is a demo
     </div>
   )
 }
