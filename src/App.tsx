@@ -7,13 +7,13 @@ import PrivateRouteWrapper from "@/Layout/components/private-router-wrapper";
 const App:React.FC = () => {
 
   return (
-    <>
+    <div className="App">
         <BrowserRouter>
           <PrivateRouteWrapper>
             <Layout/>
           </PrivateRouteWrapper>
         </BrowserRouter>
-    </>
+    </div>
   )
 }
 

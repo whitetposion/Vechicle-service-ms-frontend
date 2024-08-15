@@ -14,12 +14,12 @@
         border-bottom-right-radius: 5px;
     }
     .name-type-icon {
-        color:hsl(var(--muted-foreground)) ;
+        color:var(--muted-foreground) ;
         
     }
     .name-type-text {
         span {
-            color: hsl(var(--muted-foreground));
+            color: var(--muted-foreground);
         }
     }
     &:hover {
@@ -29,20 +29,20 @@
 }
 
 .type-name-active {
-    color: hsl(var(--foreground));
+    color: var(--foreground);
     background-color: #e0faff;
     .highlight{
         background-color: #03d7fc;
     }
     .name-type-text {
         span {
-            color: hsl(var(--foreground));
+            color: var(--foreground);
         }
     }
     .name-type-icon {
-        color: hsl(var(--foreground));
+        color: var(--foreground);
         svg {
-            color: hsl(var(--foreground));
+            color: var(--foreground);
         }
     }
 }

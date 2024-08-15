@@ -51,7 +51,7 @@
           } ;
          .slim-type-icon {
               > svg{
-                   stroke: hsl(var(--background));
+                   stroke: var(--background);
               }
          }
     }
@@ -65,7 +65,7 @@
     }
     .slim-type-icon {
          svg{
-              stroke: hsl(var(--background));
+              stroke: var(--background);
          }
     }
 }

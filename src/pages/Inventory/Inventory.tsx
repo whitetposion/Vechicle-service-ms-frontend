@@ -5,7 +5,6 @@ import { useState } from "react"
 
 const Inventory:React.FC = () => {
   const [search , setSearch] = useState<string>("")
-  // const [inventoryForm, setInventoryForm] = useState<boolean>(true)
   return (
     <div className="relative h-full w-full">
       <div className="relative h-full w-full">

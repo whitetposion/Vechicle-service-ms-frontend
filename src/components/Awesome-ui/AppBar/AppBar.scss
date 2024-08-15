@@ -5,7 +5,7 @@
     padding: 0px 12px;
     display: flex;
     align-items: center;
-    background-color: hsl(var(--background));
+    background-color: var(--background);
     border-bottom: 1px solid #d6dfe8;
     position: relative;;
     z-index: 100;

@@ -1,13 +1,16 @@
-import { Modal } from "@/Types/Modal";
+import { Modal, ModalType } from "@/Types/Modal";
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
 
-interface ModalType {
+interface ModalSliceType {
      modal: Modal
+     modalData: ModalType;
+
 }
 
-const initialState:ModalType  = {
+const initialState:ModalSliceType  = {
      modal: null,
+     modalData: null
 
 }
 export const modalSlice = createSlice({
