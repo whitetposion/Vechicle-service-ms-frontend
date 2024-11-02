@@ -1,4 +1,7 @@
-import React, {forwardRef, useImperativeHandle, Ref, useState} from "react";
+import vehicleServiceFormSchema from "@/formSchemas";
+import React, {forwardRef, useImperativeHandle, Ref, useState, FormEvent} from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
 
 interface VehicleServiceFormData {
      customerName: string;
@@ -46,6 +49,11 @@ const AddService : React.ForwardRefRenderFunction<AddServiceRef, AddServiceProps
           deadlineDay: '', 
           
      });
+     
+     const { register, handleSubmit, formState: { errors } } = useForm({
+          resolver: yupResolver(vehicleServiceFormSchema),
+     });
+
      const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           const { name, value } = e.target;
           if (name == "insuranceCover") {
@@ -60,15 +68,15 @@ const AddService : React.ForwardRefRenderFunction<AddServiceRef, AddServiceProps
           });
      };
       
-     const handleSubmit = (e: React.FormEvent) => {
-          e.preventDefault();
-          console.log(formData);
+     const onSubmit = (data) => {
+          // e.preventDefault();
+          console.log(data);
           // Here, you would typically send the data to your server or API endpoint.
      };
       
   return (
      <div className="flex items-center justify-start w-full h-full">
-          <form onSubmit={handleSubmit} className="w-full">
+          <form onSubmit={handleSubmit(onSubmit)} className="w-full">
                <div className="flex ">
                     {/* customer name */}
                     <div className="flex gap-4 mb-4 h-8 w-1/2 justify-start items-center">

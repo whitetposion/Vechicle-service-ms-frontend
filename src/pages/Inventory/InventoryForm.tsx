@@ -37,7 +37,7 @@ const InventoryForm: React.FC<InventoryFormProps> = () => {
      
      return (
           <div className='absolute flex items-center justify-center top-0 left-0 h-full w-full bg-slate-400 bg-opacity-80'>
-                 <div className="relative flex p-4 w-[50%] items-start justify-start bg-white rounded-sm">
+                <div className="relative flex p-4 w-[50%] items-start justify-start bg-white rounded-sm">
                     <form onSubmit={handleSubmit} className="w-full h-fit">
                          <div className='w-full h-fit text-[1.5rem] flex items-center justify-center font-semibold text-background bg-indigo-700 rounded-md'>
                               Editing Inventory

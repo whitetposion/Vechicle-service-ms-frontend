@@ -96,7 +96,7 @@ serviceInfo
                          <button
                               name='saveOrUpdate'
                               className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-500 focus:outline-none  ">
-                              {"Save"}
+                              {type}
                          </button> 
                          <button
                               
